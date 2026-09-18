@@ -1,0 +1,14 @@
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        res=[]
+        for i in range(len(nums)-1):
+            diff = target-nums[i]
+            for j in range(i+1,len(nums)):
+                if nums[j]==diff:
+                    res.append(i)
+                    res.append(j)
+                    break
+            if len(res)==2:break
+        return res
+        
+        
